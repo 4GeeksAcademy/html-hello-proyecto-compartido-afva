@@ -1,37 +1,202 @@
-# HTML Hello
+# Fashion Store | 电商原型
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git)
+## 1. 项目介绍
+本项目由 4Geeks Academy AI Engineering 课程的学员协作完成。
 
-为使用 [gitpod.io](gitpod.io) 代码编辑器 4Geeks Academy 学生提供的最基础的样板。
+项目目标是为一家总部位于法国的服装品牌打造线上商店的视觉原型。
 
-[![How to open html/css preview of my project in gitpod](https://github.com/4GeeksAcademy/Templates-Boilerplates/blob/master/assets/hello-html-intro.png?raw=true)](https://youtu.be/dfbDCMu_p-0)
+原型应提供现代、一致且响应式的体验，并遵循 Web 开发、SEO、无障碍设计和 Git 协作的最佳实践。
 
-## 接下来怎么做？
+## 2. 项目目标
 
-创建一个具有 [基本 HTML 页面结构](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) 的 `index.html` 文件并通过使用以下命令，实时预览 Web 服务器提供的 HTML 页面：
+- 开发电商的五个主要页面。
+- 在所有页面中建立一致的视觉形象。
+- 确保页面适配手机、平板和桌面设备。
+- 使用语义化 HTML 并遵循 SEO 最佳实践。
+- 在适当情况下加入 Schema.org 结构化数据。
+- 通过 Git、分支和 Pull Request 练习协作开发。
+- 使用 Spec-Driven Development（SDD）组织工作。
 
-```sh
-$ pip3 install flask && python3 server.py
+## 3. 功能范围
+
+### 3.1 首页（`index.html`）
+
+- 包含 Logo、搜索和账户菜单的导航栏。
+- 用于展示营销活动和精选商品的 Hero 区域。
+- 新品上架区域。
+- 热销商品区域。
+- 包含商品类别、法律信息和联系方式的页脚。
+
+### 3.2 商品目录（`catalog.html`）
+
+- 使用统一的导航栏和页脚。
+- 按类别和尺码筛选。
+- 参考网格为 4 列、5 行，共 20 件商品。
+- 提供商品详情页链接。
+
+### 3.3 商品详情（`product.html`）
+
+- 商品主图。
+- 名称、商品编号和价格。
+- 尺码和数量选择。
+- 添加到购物车按钮。
+- 详细描述、材质和推荐用途。
+
+### 3.4 购物车（`cart.html`）
+
+- 完整的购物车页面。
+- 三件示例商品。
+- 每件商品的缩略图、价格、数量和小计。
+- 显示小计、税费和总价的摘要。
+- 前往结账按钮。
+
+### 3.5 结账（`checkout.html`）
+
+付款表单在视觉上分为三个步骤：
+
+1. 个人信息。
+2. 配送地址。
+3. 银行卡付款信息。
+
+结账流程仅用于演示，不会处理真实付款，也不会存储银行卡信息。
+
+## 4. 技术
+
+| 技术 | 用途 |
+| --- | --- |
+| HTML5 | 页面结构与内容 |
+| Tailwind CSS | 样式与响应式布局 |
+| Schema.org | 结构化数据 |
+| Git | 版本控制 |
+| GitHub | 代码仓库与协作 |
+| GitHub Codespaces | 开发环境 |
+
+**限制：**不得使用 React、Vue、Angular、自定义 JavaScript、后端或其他框架。
+
+需要动态逻辑的交互将通过 HTML 进行演示，不得暗示尚未实现的功能。
+
+## 5. 项目结构
+
+```
+fashion-store/
+├── AGENTS.md
+├── CONTEXT.md
+├── README.md
+├── index.html
+├── catalog.html
+├── product.html
+├── cart.html
+├── checkout.html
+├── assets/
+│   └── images/
+└── specs/
+    ├── 01-home/
+    ├── 02-catalog/
+    ├── 03-product/
+    ├── 04-cart/
+    └── 05-checkout/
 ```
 
-- 您可以根据需要创建任意数量的 HTML 文件
-- 您还可以使用放置在 `<head></head>` 标签之间的 `<link>` 标签创建 CSS 文件并将它们导入您的网站，如下所示：
+每个 `specs/` 文件夹将在功能定义后包含以下文件：
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+- `spec.md`：需求和验收标准。
+- `plan.md`：技术实现方案。
+- `tasks.md`：任务和检查项。
+
+## 6. 开发方法
+
+项目将采用 Spec-Driven Development（SDD）：
+
+1. **背景：**了解项目、范围和限制。
+2. **SPEC：**明确需要构建的内容。
+3. **PLAN：**确定实现方式。
+4. **TASKS：**将工作拆分为可验证的任务。
+5. **实现：**开发已批准的任务。
+6. **验证：**检查需求、响应式布局、SEO 和无障碍性。
+
+AI 代理必须遵循 `AGENTS.md` 中的说明。
+
+## 7. Git 协作
+
+### 分支策略
+
+- `main`：稳定版本。
+- `develop`：集成开发人员的工作。
+- `feature/*`：开发单项功能的分支。
+
+示例：
+
+```
+feature/home
+feature/catalog
+feature/product
+feature/cart
+feature/checkout
 ```
 
-- 如果你想使用 Tailwind CSS，也可以选择在同一个 `<head>` 中通过官方的 Tailwind CSS v4 CDN 引入：
+### 工作流程
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+1. 同步 `develop` 分支。
+2. 创建 `feature/*` 分支。
+3. 开发分配的功能。
+4. 验证修改。
+5. 创建描述清晰的提交。
+6. 将分支推送到 GitHub。
+7. 创建目标为 `develop` 的 Pull Request。
+8. 请另一位开发人员进行审查。
+9. 合并已批准的修改。
+
+常规开发期间不得直接修改 `main`。
+
+## 8. 开发规范
+
+- 使用语义化 HTML5。
+- 采用 mobile-first 设计方式。
+- 一致地使用 Tailwind CSS。
+- 使用无障碍标签，并为图片添加替代文本。
+- 为每个页面设置合适的标题和元描述。
+- 为文件和资源使用清晰的名称。
+- 保持导航栏、页脚和页面导航的一致性。
+- 避免不必要的依赖。
+- 不得包含真实客户信息或银行卡信息。
+
+## 9. 运行项目
+
+项目由静态 HTML 文件组成。
+
+预览方式：
+
+1. 在 GitHub Codespaces 或本地编辑器中打开仓库。
+2. 在浏览器中打开 `index.html`，或使用环境中可用的静态服务器提供该目录。
+3. 通过页面链接浏览五个页面。
+
+无需后端或构建流程。
+
+## 10. 总体验收标准
+
+- 五个页面均已实现并互相链接。
+- 导航栏和页脚的设计保持一致。
+- 网站适配手机、平板和桌面设备。
+- 使用语义化 HTML。
+- 遵循 SEO 和 Schema.org 最佳实践。
+- 各页面中的示例商品和价格保持一致。
+- 原型符合技术限制。
+- 代码通过 Git 和 Pull Request 完成集成与审查。
+
+## 11. 项目状态
+
+**阶段：**初始化和架构准备。
+
+待确定事项：
+
+- 品牌名称。
+- 视觉形象、颜色和字体。
+- 示例图片和商品。
+- 两位开发人员之间的职责分配。
+- 各页面的规格和技术方案。
+
+## 12. 团队
+
+本项目由两位 4Geeks Academy AI Engineering 课程学员协作完成。
+
+具体职责将在开始实施前确定。
