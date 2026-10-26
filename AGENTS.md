@@ -1,5 +1,14 @@
 # Instrucciones para agentes de IA
 
+## Memory Bank
+
+- Al iniciar cada tarea, consulta `memory-bank/decisions.md` y `memory-bank/progress.md` si existen.
+- Consulta también `CONTEXT.md`, `README.md` y los documentos SPEC, PLAN y TASKS aplicables. Lee `docs/design-system.md` para decisiones de identidad, interfaz o contenido visual.
+- Trata el Memory Bank como un resumen con referencias, no como sustituto de las especificaciones. Comprueba los archivos fuente cuando haya discrepancias y distingue hechos verificados, decisiones aprobadas y pendientes.
+- Actualiza `memory-bank/progress.md` cuando haya avances relevantes o nuevas verificaciones; registra evidencias y no marques trabajo como completado sin comprobarlo.
+- Actualiza `memory-bank/decisions.md` cuando se aprueben decisiones técnicas, arquitectónicas, visuales o de producto importantes. Incluye una justificación breve y referencias a la fuente detallada.
+- Evita duplicar en el Memory Bank requisitos, planes o instrucciones ya mantenidos en otros documentos; resume el estado y enlaza la fuente correspondiente.
+
 ## Antes de trabajar
 
 - Lee `CONTEXT.md`, `README.md` y los documentos SDD aplicables a la tarea antes de empezar. Si falta una especificación necesaria, indícalo y solicita aclaración; no infieras requisitos.

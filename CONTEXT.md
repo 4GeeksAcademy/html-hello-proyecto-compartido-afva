@@ -2,7 +2,14 @@
 
 ## Cliente y objetivo
 
-Proyecto formativo de 4Geeks Academy. Una consultora debe desarrollar un prototipo de tienda online para una marca de ropa con sede en Francia. El nombre de la marca, sus productos y su identidad aún no están definidos.
+Proyecto formativo de 4Geeks Academy. Una consultora debe desarrollar un prototipo de tienda online para una marca de ropa con sede en Francia. La marca provisional y las decisiones generales de diseño están documentadas en [`docs/design-system.md`](docs/design-system.md); el catálogo de productos aún está pendiente.
+
+## Continuidad entre iteraciones
+
+- Al iniciar una tarea, consulta [`memory-bank/decisions.md`](memory-bank/decisions.md) para conocer las decisiones aprobadas y [`memory-bank/progress.md`](memory-bank/progress.md) para el estado verificado, los pendientes y las evidencias.
+- El Memory Bank es un resumen de continuidad, no reemplaza las fuentes del proyecto: `AGENTS.md` contiene instrucciones de trabajo; `CONTEXT.md`, el alcance y las restricciones generales; `docs/design-system.md`, la identidad y las reglas visuales; y los archivos `spec.md`, `plan.md` y `task.md` de cada vista, sus requisitos y tareas.
+- Si el Memory Bank, el README o una implementación parecen contradecir una fuente aprobada, comprueba los documentos fuente y el código. Distingue decisiones aprobadas de estados verificados y pendientes; no infieras requisitos.
+- Después de avances relevantes, actualiza `progress.md` con evidencias. Registra en `decisions.md` las decisiones importantes solo cuando hayan sido aprobadas. Evita duplicar allí el contenido detallado de las specs y planes.
 
 ## Alcance
 
@@ -29,15 +36,15 @@ Usar exclusivamente HTML5 y Tailwind CSS. No utilizar React, Vue, Angular, backe
 
 ## Requisitos por vista
 
-Los README presentes en el repositorio describen la plantilla inicial HTML/CSS, no los requisitos específicos de las vistas del ejercicio. Por tanto, los detalles de contenido, estructura y comportamiento de cada vista quedan pendientes de confirmar con el README del ejercicio.
+El README ofrece una descripción general del proyecto y puede no reflejar las decisiones más recientes. Los requisitos específicos de cada vista se mantienen en su documentación SDD aplicable. Actualmente, Home tiene documentos en `specs/01-home/`; para las demás vistas, consulta sus propios documentos antes de implementar y confirma cualquier requisito que no esté especificado.
 
 | Vista | Alcance conocido | Detalles específicos del ejercicio |
 | --- | --- | --- |
-| Home | Vista inicial de la tienda. | No aparecen en los README disponibles. |
-| Catálogo | Vista de catálogo de la tienda. | No aparecen en los README disponibles. |
-| Producto | Vista de producto. | No aparecen en los README disponibles. |
-| Carrito | Vista del carrito. | No aparecen en los README disponibles. |
-| Checkout | Vista de checkout. | No aparecen en los README disponibles. |
+| Home | Vista inicial de la tienda. | `specs/01-home/spec.md`, `plan.md` y `task.md`. Consultar también el estado verificado en `memory-bank/progress.md`. |
+| Catálogo | Vista de catálogo de la tienda. | Consultar la SPEC/PLAN/TASKS aplicables antes de implementar; no inferir requisitos. |
+| Producto | Vista de producto. | Consultar la SPEC/PLAN/TASKS aplicables antes de implementar; no inferir requisitos. |
+| Carrito | Vista del carrito. | Consultar la SPEC/PLAN/TASKS aplicables antes de implementar; no inferir requisitos. |
+| Checkout | Vista de checkout. | Consultar la SPEC/PLAN/TASKS aplicables antes de implementar; no inferir requisitos. |
 
 No se deben inferir requisitos adicionales hasta disponer de la especificación del ejercicio.
 
@@ -66,8 +73,6 @@ Si la especificación del ejercicio no está disponible, aclarar los requisitos 
 
 ## Decisiones pendientes
 
-- Nombre de la marca.
-- Identidad visual.
 - Catálogo de productos y su contenido.
 - Distribución del trabajo entre las personas del equipo.
-- Requisitos detallados de cada vista, según el README del ejercicio, que no está incluido entre los archivos disponibles actualmente.
+- Requisitos detallados y decisiones de las vistas distintas de Home, según sus documentos SDD aplicables.

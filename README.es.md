@@ -82,6 +82,11 @@ fashion-store/
 ├── AGENTS.md
 ├── CONTEXT.md
 ├── README.md
+├── docs/
+│   └── design-system.md
+├── memory-bank/
+│   ├── decisions.md
+│   └── progress.md
 ├── index.html
 ├── catalog.html
 ├── product.html
@@ -91,17 +96,18 @@ fashion-store/
 │   └── images/
 └── specs/
     ├── 01-home/
+    │   ├── spec.md
+    │   ├── plan.md
+    │   └── task.md
     ├── 02-catalog/
     ├── 03-product/
     ├── 04-cart/
     └── 05-checkout/
 ```
 
-Cada carpeta de `specs/` contendrá, cuando se defina su funcionalidad:
+Home cuenta actualmente con `spec.md`, `plan.md` y `task.md` en `specs/01-home/`. Las carpetas de las otras vistas se aplazan a una rama posterior y todavía no tienen documentos SDD aprobados.
 
-- `spec.md`: requisitos y criterios de aceptación.
-- `plan.md`: estrategia técnica de implementación.
-- `tasks.md`: tareas y verificaciones.
+Los documentos SDD definen los requisitos, la estrategia de implementación y las tareas verificables de cada vista aprobada.
 
 ## 6. Metodología de desarrollo
 
@@ -115,6 +121,8 @@ Se utilizará Spec-Driven Development (SDD):
 6. **Validación:** comprobar requisitos, responsive, SEO y accesibilidad.
 
 Los agentes de IA deberán seguir las instrucciones establecidas en `AGENTS.md`.
+
+El Memory Bank de `memory-bank/` facilita la continuidad entre sesiones: `decisions.md` resume las decisiones aprobadas y sus fuentes, mientras que `progress.md` registra el estado verificado, las evidencias y las tareas pendientes. Estos resúmenes no sustituyen las especificaciones ni los planes detallados.
 
 ## 7. Colaboración mediante Git
 
@@ -185,15 +193,21 @@ No se requiere backend ni proceso de compilación.
 
 ## 11. Estado del proyecto
 
-**Fase:** inicialización y preparación de la arquitectura.
+**Fase:** Home parcialmente implementada en la rama `home`. Catálogo, Producto, Carrito y Checkout se aplazan a una rama posterior y siguen vacíos.
 
-Pendiente de definir:
+Aprobado para la iteración actual de Home:
 
-- Nombre comercial de la marca.
-- Identidad visual, colores y tipografía.
-- Imágenes y productos de ejemplo.
+- Identidad provisional MAISON NOVA y navegación/footer compartidos, documentados en `docs/design-system.md`.
+- Diez espacios numerados para más vendidos, con áreas reservadas para imagen y precio.
+- Por ahora no habrá tarjetas de nuevos lanzamientos; esa sección muestra «Próximamente».
+
+Pendiente:
+
+- Titular, texto e imagen aprobados para la campaña del hero; el texto actual es provisional.
+- Nombres, imágenes, precios y moneda reales para los diez productos más vendidos.
+- Comprobaciones manuales responsive, de renderizado en navegador, teclado y contraste.
+- Especificaciones e implementación de las cuatro vistas aplazadas.
 - Reparto de responsabilidades entre los dos desarrolladores.
-- Especificaciones y planes técnicos de cada vista.
 
 ## 12. Equipo
 

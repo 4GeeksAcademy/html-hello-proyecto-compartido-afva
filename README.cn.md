@@ -82,6 +82,11 @@ fashion-store/
 ├── AGENTS.md
 ├── CONTEXT.md
 ├── README.md
+├── docs/
+│   └── design-system.md
+├── memory-bank/
+│   ├── decisions.md
+│   └── progress.md
 ├── index.html
 ├── catalog.html
 ├── product.html
@@ -91,17 +96,18 @@ fashion-store/
 │   └── images/
 └── specs/
     ├── 01-home/
+    │   ├── spec.md
+    │   ├── plan.md
+    │   └── task.md
     ├── 02-catalog/
     ├── 03-product/
     ├── 04-cart/
     └── 05-checkout/
 ```
 
-每个 `specs/` 文件夹将在功能定义后包含以下文件：
+Home 目前在 `specs/01-home/` 中包含 `spec.md`、`plan.md` 和 `task.md`。其他页面目录已推迟到后续分支，目前尚无获批的 SDD 文档。
 
-- `spec.md`：需求和验收标准。
-- `plan.md`：技术实现方案。
-- `tasks.md`：任务和检查项。
+SDD 文档用于定义各个已批准页面的需求、实现方案和可验证任务。
 
 ## 6. 开发方法
 
@@ -115,6 +121,8 @@ fashion-store/
 6. **验证：**检查需求、响应式布局、SEO 和无障碍性。
 
 AI 代理必须遵循 `AGENTS.md` 中的说明。
+
+`memory-bank/` 中的 Memory Bank 用于保持不同工作会话之间的信息连续性：`decisions.md` 汇总已批准的决策及其来源，`progress.md` 记录已核实的状态、证据和待办事项。这些摘要不能替代详细规格或计划。
 
 ## 7. Git 协作
 
@@ -185,15 +193,21 @@ feature/checkout
 
 ## 11. 项目状态
 
-**阶段：**初始化和架构准备。
+**阶段：**Home 页面已在 `home` 分支部分实现。目录、商品详情、购物车和结账页面推迟到后续分支，目前仍为空。
 
-待确定事项：
+当前 Home 迭代已批准：
 
-- 品牌名称。
-- 视觉形象、颜色和字体。
-- 示例图片和商品。
+- 临时品牌 MAISON NOVA 及共享导航栏/页脚，详见 `docs/design-system.md`。
+- 十个编号热销商品占位卡片，预留图片和价格区域。
+- 暂不添加新品卡片；该区域显示“即将推出”。
+
+待完成：
+
+- 经批准的 Hero 活动标题、文案和图片；当前文案仅为临时内容。
+- 十个热销商品的真实名称、图片、价格和货币。
+- 手动检查响应式布局、浏览器渲染、键盘操作和对比度。
+- 后续分支中四个页面的规格和实现。
 - 两位开发人员之间的职责分配。
-- 各页面的规格和技术方案。
 
 ## 12. 团队
 

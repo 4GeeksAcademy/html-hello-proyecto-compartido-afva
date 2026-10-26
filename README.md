@@ -82,6 +82,11 @@ fashion-store/
 ├── AGENTS.md
 ├── CONTEXT.md
 ├── README.md
+├── docs/
+│   └── design-system.md
+├── memory-bank/
+│   ├── decisions.md
+│   └── progress.md
 ├── index.html
 ├── catalog.html
 ├── product.html
@@ -91,17 +96,18 @@ fashion-store/
 │   └── images/
 └── specs/
     ├── 01-home/
+    │   ├── spec.md
+    │   ├── plan.md
+    │   └── task.md
     ├── 02-catalog/
     ├── 03-product/
     ├── 04-cart/
     └── 05-checkout/
 ```
 
-Each `specs/` folder will contain the following files when its functionality is defined:
+The Home currently has `spec.md`, `plan.md`, and `task.md` in `specs/01-home/`. The other view folders are deferred to a later branch and do not yet have approved SDD documents.
 
-- `spec.md`: requirements and acceptance criteria.
-- `plan.md`: technical implementation strategy.
-- `tasks.md`: tasks and checks.
+SDD documents define requirements, implementation strategy, and verifiable tasks for each approved view.
 
 ## 6. Development methodology
 
@@ -115,6 +121,8 @@ Spec-Driven Development (SDD) will be used:
 6. **Validation:** check requirements, responsiveness, SEO, and accessibility.
 
 AI agents must follow the instructions in `AGENTS.md`.
+
+The Memory Bank in `memory-bank/` supports continuity between work sessions: `decisions.md` summarizes approved decisions and their sources, while `progress.md` records verified status, evidence, and pending work. These summaries do not replace the detailed specifications or plans.
 
 ## 7. Git collaboration
 
@@ -185,15 +193,21 @@ No backend or build process is required.
 
 ## 11. Project status
 
-**Phase:** initial setup and architecture preparation.
+**Phase:** Home partially implemented on the `home` branch. Catalog, Product, Cart, and Checkout are deferred to a later branch and remain empty.
 
-To be defined:
+Approved for the current Home iteration:
 
-- Brand name.
-- Visual identity, colors, and typography.
-- Sample images and products.
+- Provisional MAISON NOVA identity and shared navigation/footer, documented in `docs/design-system.md`.
+- Ten numbered best-seller placeholders with image and price areas reserved.
+- No new-arrival cards for now; that section displays “Coming soon”.
+
+Pending:
+
+- Approved hero campaign headline, copy, and image; current hero copy is provisional.
+- Actual names, images, prices, and currency for the ten best-seller products.
+- Manual responsive, browser-rendering, keyboard, and contrast checks.
+- Specifications and implementation for the four deferred views.
 - Responsibilities shared between the two developers.
-- Specifications and technical plans for each view.
 
 ## 12. Team
 
